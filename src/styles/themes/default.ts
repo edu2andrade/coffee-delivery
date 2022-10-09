@@ -20,4 +20,8 @@ export const defaultTheme = {
   'yellow-800': '#C47F17',
 
   'blue-500': '#3182CE',
+
+  'purple-800': '#4B2995',
+  'purple-500': '#8047F8',
+  'purple-100': '#EBE5F9',
 }
