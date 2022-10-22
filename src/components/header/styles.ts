@@ -18,7 +18,8 @@ export const InfoContainer = styled.div`
   width: 14rem;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: right;
+  gap: 12px;
 
   button {
     padding: 0.5rem;
@@ -28,8 +29,8 @@ export const InfoContainer = styled.div`
     gap: 4px;
     border: none;
     border-radius: 6px;
-    background: ${(props) => props.theme['purple-100']};
-    color: ${(props) => props.theme['purple-500']};
+    background: ${(props) => props.theme['purple-light']};
+    color: ${(props) => props.theme['purple-regular']};
     font-size: 0.875rem;
 
     transition: all 0.2s;
@@ -40,7 +41,7 @@ export const InfoContainer = styled.div`
   }
 `
 export const CartContainer = styled.div`
-  background: ${(props) => props.theme['yellow-200']};
+  background: ${(props) => props.theme['yellow-light']};
   padding: 0.5rem;
   border-radius: 6px;
   display: flex;
@@ -60,11 +61,11 @@ export const QuantityContainer = styled.div`
   position: absolute;
   right: -7px;
   top: -7px;
-  background: ${(props) => props.theme['yellow-800']};
+  background: ${(props) => props.theme['yellow-dark']};
   color: ${(props) => props.theme.white};
   font-size: 0.825rem;
   font-weight: bold;
-  padding: 2px 5px;
+  padding: 2px 6px;
   border-radius: 50%;
   display: flex;
   justify-content: center;

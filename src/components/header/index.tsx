@@ -1,4 +1,4 @@
-import { ShoppingCart, GoogleLogo } from 'phosphor-react'
+import { ShoppingCart, MapPin } from 'phosphor-react'
 import coffeeLogo from '../../assets/coffee_logo.svg'
 import {
   HeaderContainer,
@@ -9,18 +9,18 @@ import {
 } from './styles'
 
 export function Header() {
-  const isQuantityExists = false
+  const isQuantityExists = true
   return (
     <HeaderContainer>
       <ContentContainer>
         <img alt="Coffee Delivery Logo" src={coffeeLogo} />
         <InfoContainer>
           <button>
-            <GoogleLogo size={28} weight="fill" color="#8047F8" />
-            Login with Google
+            <MapPin size={22} weight="fill" color="#8047F8" />
+            Barcelona (SPAIN)
           </button>
-          <CartContainer>
-            <ShoppingCart size={28} weight="fill" color="#C47F17" />
+          <CartContainer role="menuitem">
+            <ShoppingCart size={22} weight="fill" color="#C47F17" />
             {isQuantityExists && (
               <QuantityContainer>
                 <span>3</span>

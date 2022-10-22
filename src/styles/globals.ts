@@ -14,8 +14,8 @@ export const GlobalStyle = createGlobalStyle`
 
   body {
     text-rendering: optimizeSpeed;
-    background: ${(props) => props.theme.white};
-    color: ${(props) => props.theme['gray-900']};
+    background: ${(props) => props.theme['background-bg']};
+    color: ${(props) => props.theme['base-text']};
   }
 
   body,
@@ -37,7 +37,7 @@ export const GlobalStyle = createGlobalStyle`
   }
 
   a {
-    color: ${(props) => props.theme['blue-500']} ;
+    color: ${(props) => props.theme['purple-dark']} ;
     text-decoration: underline;
   }
 `

@@ -1,13 +1,21 @@
 import styled from 'styled-components'
+import bgImage from '../../assets/Background.svg'
 
 export const HomeContainer = styled.div`
   width: 100vw;
   height: 100%;
-  padding: 0 2rem;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
+`
+export const BgContainer = styled.div`
+  background: url(${bgImage});
+  width: 100%;
+  padding: 0 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 `
 export const HeroContainer = styled.section`
   min-height: 34rem;
@@ -21,6 +29,7 @@ export const HeroContainer = styled.section`
     font-size: 4rem;
     font-weight: 800;
     line-height: 4.5rem;
+    color: ${(props) => props.theme['base-title']};
   }
 
   p {
