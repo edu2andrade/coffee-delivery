@@ -90,4 +90,10 @@ export const CartButton = styled.button`
   height: 2.375rem;
   border: none;
   border-radius: 6px;
+
+  transition: all 0.2s;
+
+  &:hover {
+    filter: opacity(0.8);
+  }
 `

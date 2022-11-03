@@ -14,17 +14,17 @@ import milkCoffee from '../assets/coffee-images/milk-coffee.svg'
 import mochaccino from '../assets/coffee-images/mochaccino.svg'
 
 export type CoffeeType = {
-  id: string
+  id: number
   name: string
   description: string
+  image: string
   price: number
   tags: string[]
-  image: string
 }
 
 export const coffeeTypes: CoffeeType[] = [
   {
-    id: '1',
+    id: 1,
     name: 'Traditional Expresso',
     description:
       'Traditional coffee made just with boiling water and best coffee',
@@ -33,7 +33,7 @@ export const coffeeTypes: CoffeeType[] = [
     image: expresso,
   },
   {
-    id: '2',
+    id: 2,
     name: 'American Expresso',
     description: 'Diluted expresso, less intense than traditional',
     price: 9.9,
@@ -41,7 +41,7 @@ export const coffeeTypes: CoffeeType[] = [
     image: american,
   },
   {
-    id: '3',
+    id: 3,
     name: 'Cream Expresso',
     description: 'Traditional expresso with creamy foam',
     price: 9.9,
@@ -49,7 +49,7 @@ export const coffeeTypes: CoffeeType[] = [
     image: creamExpresso,
   },
   {
-    id: '4',
+    id: 4,
     name: 'Cold Expresso',
     description: 'Coffee prepared with expresso and ice cubes',
     price: 9.9,
@@ -57,7 +57,7 @@ export const coffeeTypes: CoffeeType[] = [
     image: coldCoffee,
   },
   {
-    id: '5',
+    id: 5,
     name: 'Milk Expresso',
     description: 'Traditional expresso with steamed milk',
     price: 9.9,
@@ -65,7 +65,7 @@ export const coffeeTypes: CoffeeType[] = [
     image: milkCoffee,
   },
   {
-    id: '6',
+    id: 6,
     name: 'Latte',
     description: 'Expresso with double milk and creamy foam',
     price: 9.9,
@@ -73,7 +73,7 @@ export const coffeeTypes: CoffeeType[] = [
     image: latte,
   },
   {
-    id: '7',
+    id: 7,
     name: 'Capuccino',
     description: 'Cinnamon drink made of equal doses of coffee, milk and foam',
     price: 9.9,
@@ -81,7 +81,7 @@ export const coffeeTypes: CoffeeType[] = [
     image: capuccino,
   },
   {
-    id: '8',
+    id: 8,
     name: 'Macchiato',
     description: 'Expresso blended with some hot milk and foam',
     price: 9.9,
@@ -89,7 +89,7 @@ export const coffeeTypes: CoffeeType[] = [
     image: macchiato,
   },
   {
-    id: '9',
+    id: 9,
     name: 'Mochaccino',
     description: 'Expresso with chocolate, milk and foam',
     price: 9.9,
@@ -97,7 +97,7 @@ export const coffeeTypes: CoffeeType[] = [
     image: mochaccino,
   },
   {
-    id: '10',
+    id: 10,
     name: 'Hot Chocolate',
     description: 'Drink made with dissolved chocolate in hot milk and coffee',
     price: 9.9,
@@ -105,7 +105,7 @@ export const coffeeTypes: CoffeeType[] = [
     image: hotChocolate,
   },
   {
-    id: '11',
+    id: 11,
     name: 'Cuban Coffee',
     description: 'Cold drink made with expresso, rum, cream and mint',
     price: 9.9,
@@ -113,7 +113,7 @@ export const coffeeTypes: CoffeeType[] = [
     image: cuban,
   },
   {
-    id: '12',
+    id: 12,
     name: 'Hawaiian Coffee',
     description: 'Sweetened drink prepared with coffee and coconut milk',
     price: 9.9,
@@ -121,7 +121,7 @@ export const coffeeTypes: CoffeeType[] = [
     image: hawaiian,
   },
   {
-    id: '13',
+    id: 13,
     name: 'Arab Coffee',
     description: 'Drink prepared with Arabic coffee beans and spices',
     price: 9.9,
@@ -129,7 +129,7 @@ export const coffeeTypes: CoffeeType[] = [
     image: arab,
   },
   {
-    id: '14',
+    id: 14,
     name: 'Irish Coffee',
     description: 'Coffee-based drink, Irish whiskey, sugar and whipped cream',
     price: 9.9,

@@ -1,5 +1,8 @@
 import { Minus, Plus, ShoppingCart } from 'phosphor-react'
 import { useState } from 'react'
+import { useAppDispatch } from '../../../../app/hooks'
+import { addToCart } from '../../../../features/cart/cart-slice'
+
 import { CoffeeType } from '../../../../data/data'
 import {
   CardContainer,
@@ -18,15 +21,23 @@ interface CardProps {
 
 export function Card({ coffee }: CardProps) {
   const { name, tags, description, image, price } = coffee
-  // Set all state management on Redux...
-  const [quantity, setQuantity] = useState(1)
+  const [amount, setAmount] = useState(1)
+  // Call dispatch from Redux here...
+  const dispatch = useAppDispatch()
 
-  const handleIncreaseQuantity = () => {
-    setQuantity((state) => state + 1)
+  function handleIncreaseQuantity() {
+    setAmount((state) => state + 1)
   }
-
-  const handleDecreaseQuantity = () => {
-    setQuantity((state) => state - 1)
+  function handleDecreaseQuantity() {
+    setAmount((state) => state - 1)
+  }
+  function handleAddToCart() {
+    dispatch(
+      addToCart({
+        ...coffee,
+        amount,
+      }),
+    )
   }
 
   return (
@@ -48,12 +59,12 @@ export function Card({ coffee }: CardProps) {
             <button onClick={handleDecreaseQuantity}>
               <Minus size={14} color="#8047F8" weight="fill" />
             </button>
-            {quantity}
+            {amount}
             <button onClick={handleIncreaseQuantity}>
               <Plus size={14} color="#8047F8" weight="fill" />
             </button>
           </QuantitySelect>
-          <CartButton>
+          <CartButton onClick={handleAddToCart}>
             <ShoppingCart size={22} weight="fill" />
           </CartButton>
         </UserActions>
