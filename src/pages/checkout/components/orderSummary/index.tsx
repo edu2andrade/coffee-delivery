@@ -48,23 +48,27 @@ export const OrderSummary = () => {
           </SelectedCoffeeCard>
         ))}
 
-      <Container>
-        <ul>
-          <li>
-            <span>Total Items</span>
-            <span>{`€ ${cartItemsTotal.toFixed(2)}`}</span>
-          </li>
-          <li>
-            <span>Delivery costs</span>
-            <span>€ 5,50</span>
-          </li>
-          <li>
-            <strong>Total</strong>
-            <strong>{`€ ${(cartItemsTotal + 5.5).toFixed(2)}`}</strong>
-          </li>
-        </ul>
-        <ConfirmOrderButton>Confirmar Pedido</ConfirmOrderButton>
-      </Container>
+      {products.length !== 0 ? (
+        <Container>
+          <ul>
+            <li>
+              <span>Total Items</span>
+              <span>{`€ ${cartItemsTotal.toFixed(2)}`}</span>
+            </li>
+            <li>
+              <span>Delivery costs</span>
+              <span>€ 5,50</span>
+            </li>
+            <li>
+              <strong>Total</strong>
+              <strong>{`€ ${(cartItemsTotal + 5.5).toFixed(2)}`}</strong>
+            </li>
+          </ul>
+          <ConfirmOrderButton>Confirm Order</ConfirmOrderButton>
+        </Container>
+      ) : (
+        <h3>There are no items in your cart!</h3>
+      )}
     </Card>
   )
 }
