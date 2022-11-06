@@ -20,52 +20,75 @@ const cartSlice = createSlice({
   name: 'cart',
   initialState,
   reducers: {
-    // ↓ this is working fine!
+    // ↓ Adding items to cart
     addToCart: (state, action: PayloadAction<ProductsType>) => {
-      const productAlreadyExists = state.products.find(
+      // ↓ verifying if exists
+      const productExists = state.products.find(
         (product) => product.id === action.payload.id,
       )
-      if (productAlreadyExists) {
-        productAlreadyExists.amount++
-        state.totalAmount = productAlreadyExists.amount
+      // ↓ update cart, item.amount and totalAmount
+      if (productExists) {
+        productExists.amount++
+        state.totalAmount++
       } else {
         state.products.push({ ...action.payload })
         state.totalAmount = state.totalAmount + action.payload.amount
       }
-
-      // productAlreadyExists
-      //   ? productAlreadyExists.amount++
-      //   : state.products.push({ ...action.payload })
-
-      // ↓ update total
+      // ↓ update cartItemsTotal
       state.cartItemsTotal = state.products.reduce((total, item) => {
         return total + item.price * item.amount
       }, 0)
     },
-    // need to verify this...
+    // Increment items
     incrementAmount: (state, action: PayloadAction<number>) => {
-      const product = state.products.find(
+      // ↓ verifying if exists
+      const productExists = state.products.find(
         (product) => product.id === action.payload,
       )
-      if (product) {
-        product.amount++
+      // ↓ Updating item.amount and totalAmount
+      if (productExists) {
+        productExists.amount++
+        state.totalAmount++
       }
+      // ↓ update cartItemsTotal
+      state.cartItemsTotal = state.products.reduce((total, item) => {
+        return total + item.price * item.amount
+      }, 0)
     },
-    // need to verify this...
+    // Decrement items
     decrementAmount: (state, action: PayloadAction<number>) => {
-      const product = state.products.find(
+      // ↓ verifying if exists
+      const productExists = state.products.find(
         (product) => product.id === action.payload,
       )
-      if (product) {
-        product.amount === 1 ? (product.amount = 1) : product.amount--
+      // ↓ Updating item.amount and totalAmount
+      if (productExists) {
+        productExists.amount === 1
+          ? (productExists.amount = 1)
+          : productExists.amount-- && state.totalAmount--
       }
+
+      // ↓ update cartItemsTotal
+      state.cartItemsTotal = state.products.reduce((total, item) => {
+        return total + item.price * item.amount
+      }, 0)
     },
-    // need to verify this...
-    removeProduct: (state, action: PayloadAction<ProductsType>) => {
-      const removedProduct = state.products.filter(
-        (product) => product.id !== action.payload.id,
+    // Remove an item from the cart
+    removeProduct: (state, action: PayloadAction<number>) => {
+      // ↓ Create an updatedCart
+      const updatedCart = state.products.filter(
+        (product) => product.id !== action.payload,
       )
-      state.products = removedProduct
+      // ↓ update the cart in state
+      state.products = updatedCart
+      // ↓ update totalAmount
+      state.totalAmount = updatedCart.reduce((total, item) => {
+        return total + item.amount
+      }, 0)
+      // ↓ update cartItemsTotal
+      state.cartItemsTotal = updatedCart.reduce((total, item) => {
+        return total + item.price * item.amount
+      }, 0)
     },
   },
 })

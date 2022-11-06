@@ -1,9 +1,11 @@
 import { Minus, Plus, ShoppingCart } from 'phosphor-react'
 import { useState } from 'react'
+
 import { useAppDispatch } from '../../../../app/hooks'
 import { addToCart } from '../../../../features/cart/cart-slice'
 
 import { CoffeeType } from '../../../../data/data'
+
 import {
   CardContainer,
   TagContainer,

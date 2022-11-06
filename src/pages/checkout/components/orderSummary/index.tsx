@@ -1,6 +1,12 @@
 import { Minus, Plus, Trash } from 'phosphor-react'
 
-import { useAppSelector } from '../../../../app/hooks'
+import { useAppSelector, useAppDispatch } from '../../../../app/hooks'
+
+import {
+  incrementAmount,
+  decrementAmount,
+  removeProduct,
+} from '../../../../features/cart/cart-slice'
 
 import {
   Card,
@@ -15,38 +21,43 @@ import {
 
 export const OrderSummary = () => {
   const { products, cartItemsTotal } = useAppSelector((store) => store.cart)
+  const dispatch = useAppDispatch()
 
   return (
     <Card>
       {products &&
-        products.map((product) => (
-          <SelectedCoffeeCard key={product.id}>
-            <img src={product.image} alt="" />
-            <div>
-              <p>{product.name}</p>
-              <Actions>
-                <CounterSelect>
-                  <button
-                  // onClick={() => changeQuantityById(product.id, 'decrease')}
+        products.map((product) => {
+          return (
+            <SelectedCoffeeCard key={product.id}>
+              <img src={product.image} alt="" />
+              <div>
+                <p>{product.name}</p>
+                <Actions>
+                  <CounterSelect>
+                    <button
+                      onClick={() => dispatch(decrementAmount(product.id))}
+                    >
+                      <Minus size={20} color="#8047F8" weight="fill" />
+                    </button>
+                    {product.amount}
+                    <button
+                      onClick={() => dispatch(incrementAmount(product.id))}
+                    >
+                      <Plus size={20} color="#8047F8" weight="fill" />
+                    </button>
+                  </CounterSelect>
+                  <RemoveButton
+                    onClick={() => dispatch(removeProduct(product.id))}
                   >
-                    <Minus size={20} color="#8047F8" weight="fill" />
-                  </button>
-                  {product.amount}
-                  <button
-                  // onClick={() => changeQuantityById(product.id, 'increase')}
-                  >
-                    <Plus size={20} color="#8047F8" weight="fill" />
-                  </button>
-                </CounterSelect>
-                <RemoveButton /* onClick={() => removeProduct(product.id)} */>
-                  <Trash size={16} color="#8047F8" />
-                  Remove
-                </RemoveButton>
-              </Actions>
-            </div>
-            <Price>{`€ ${product.price.toFixed(2)}`}</Price>
-          </SelectedCoffeeCard>
-        ))}
+                    <Trash size={16} color="#8047F8" />
+                    Remove
+                  </RemoveButton>
+                </Actions>
+              </div>
+              <Price>{`€ ${product.price.toFixed(2)}`}</Price>
+            </SelectedCoffeeCard>
+          )
+        })}
 
       {products.length !== 0 ? (
         <Container>
