@@ -12,7 +12,7 @@ import {
   Card,
   Actions,
   ConfirmOrderButton,
-  Container,
+  CartTotalContainer,
   CounterSelect,
   Price,
   RemoveButton,
@@ -60,7 +60,7 @@ export const OrderSummary = () => {
         })}
 
       {products.length !== 0 ? (
-        <Container>
+        <CartTotalContainer>
           <ul>
             <li>
               <span>Total Items</span>
@@ -76,7 +76,7 @@ export const OrderSummary = () => {
             </li>
           </ul>
           <ConfirmOrderButton>Confirm Order</ConfirmOrderButton>
-        </Container>
+        </CartTotalContainer>
       ) : (
         <h3>There are no items in your cart!</h3>
       )}

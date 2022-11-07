@@ -2,24 +2,9 @@ import styled from 'styled-components'
 
 export const Card = styled.section`
   padding: 2.5rem;
-  border-radius: 6px;
+  border-radius: 6px 36px;
   background: ${(props) => props.theme['base-card']};
 `
-
-// export const CardHeader = styled.header`
-//   display: flex;
-//   gap: 0.5rem;
-//   margin-bottom: 2rem;
-//   h4 {
-//     color: ${(props) => props.theme['base-subtitle']};
-//     font-weight: 400;
-//   }
-//   p {
-//     color: ${(props) => props.theme['base-text']};
-//     font-size: 0.875rem;
-//   }
-// `
-
 export const SelectedCoffeeCard = styled.div`
   display: flex;
   padding: 0.5rem 0.5rem 1.5rem;
@@ -47,18 +32,19 @@ export const SelectedCoffeeCard = styled.div`
     }
   }
 `
-
 export const RemoveButton = styled.button`
   padding: 0.5rem;
   background: ${(props) => props.theme['base-button']};
   font-size: 0.75rem;
-  line-height: 1.6;
+  /* line-height: 1.6; */
   color: ${(props) => props.theme['base-text']};
   text-transform: uppercase;
+  border: none;
   border-radius: 6px;
   cursor: pointer;
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: 0.25rem;
   transition: background-color 0.2s ease-in-out;
   &:hover {
@@ -96,7 +82,7 @@ export const Price = styled.span`
   margin-left: auto;
 `
 
-export const Container = styled.div`
+export const CartTotalContainer = styled.div`
   ul {
     display: flex;
     flex-direction: column;
@@ -112,6 +98,7 @@ export const ConfirmOrderButton = styled.button`
   width: 100%;
   padding: 0.75rem;
   margin-top: 1.5rem;
+  border: none;
   border-radius: 6px;
   cursor: pointer;
   font-size: 0.875rem;

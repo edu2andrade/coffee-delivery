@@ -31,7 +31,7 @@ export function Card({ coffee }: CardProps) {
     setAmount((state) => state + 1)
   }
   function handleDecreaseQuantity() {
-    setAmount((state) => state - 1)
+    amount <= 1 ? setAmount(1) : setAmount((state) => state - 1)
   }
   function handleAddToCart() {
     dispatch(
