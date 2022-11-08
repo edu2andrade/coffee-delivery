@@ -1,10 +1,12 @@
+import { CompleteOrderForm } from './components/completeOrderForm'
 import { OrderSummary } from './components/orderSummary'
+import { CheckoutContainer } from './styles'
 
 export function CheckoutPage() {
   return (
-    <>
-      <h1>Checkout Page</h1>
+    <CheckoutContainer>
+      <CompleteOrderForm />
       <OrderSummary />
-    </>
+    </CheckoutContainer>
   )
 }

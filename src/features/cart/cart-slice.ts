@@ -16,6 +16,8 @@ const initialState: CartState = {
   cartItemsTotal: 0,
 }
 
+// Create a cleanCart reducer that cleans the cart (= initialState)
+
 const cartSlice = createSlice({
   name: 'cart',
   initialState,

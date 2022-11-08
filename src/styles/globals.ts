@@ -32,6 +32,11 @@ export const GlobalStyle = createGlobalStyle`
     font-size: xx-large;
   }
 
+  h3 {
+    font-family: 'Baloo 2', cursive;
+    font-size: x-large;
+  }
+
   button {
     cursor: pointer;
   }
