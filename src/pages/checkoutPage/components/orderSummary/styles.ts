@@ -1,13 +1,16 @@
 import styled from 'styled-components'
 
 export const OrderSummaryContainer = styled.div`
-  width: 100%;
+  min-width: 28rem;
   display: flex;
   flex-direction: column;
   gap: 0.75rem;
+
+  @media (max-width: 84rem) {
+    min-width: 18rem;
+  }
 `
 export const Card = styled.section`
-  /* width: 40rem; */
   padding: 2.5rem;
   border-radius: 6px 36px;
   background: ${(props) => props.theme['base-card']};

@@ -2,7 +2,8 @@ import { CurrencyDollar, MapPinLine } from 'phosphor-react'
 import { useTheme } from 'styled-components'
 import { SectionTitle } from '../sectionTitle'
 import { AddressForm } from './addressForm'
-import { PaymentMethod } from './paymentMethod'
+import { PaymentMethodsOptions } from './paymentMethodsOptions'
+
 import { CompleteOrderFormContainer, FormSectionContainer } from './styles'
 
 export function CompleteOrderForm() {
@@ -24,7 +25,7 @@ export function CompleteOrderForm() {
           title={'Payment'}
           subtitle={'Choose your preferred payment method'}
         />
-        <PaymentMethod />
+        <PaymentMethodsOptions />
       </FormSectionContainer>
     </CompleteOrderFormContainer>
   )

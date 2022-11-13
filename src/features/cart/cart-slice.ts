@@ -16,8 +16,6 @@ const initialState: CartState = {
   cartItemsTotal: 0,
 }
 
-// Create a cleanCart reducer that cleans the cart (= initialState)
-
 const cartSlice = createSlice({
   name: 'cart',
   initialState,
@@ -92,11 +90,21 @@ const cartSlice = createSlice({
         return total + item.price * item.amount
       }, 0)
     },
+    clearCart: (state) => {
+      state.products = []
+      state.cartItemsTotal = 0
+      state.totalAmount = 0
+    },
   },
 })
 
-export const { addToCart, incrementAmount, decrementAmount, removeProduct } =
-  cartSlice.actions
+export const {
+  addToCart,
+  incrementAmount,
+  decrementAmount,
+  removeProduct,
+  clearCart,
+} = cartSlice.actions
 
 export const selectCart = (state: RootState) => state.cart
 

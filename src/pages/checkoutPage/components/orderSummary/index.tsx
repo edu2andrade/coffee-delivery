@@ -1,12 +1,11 @@
-import { Minus, Plus, Trash } from 'phosphor-react'
-
 import { useAppSelector, useAppDispatch } from '../../../../app/hooks'
-
 import {
   incrementAmount,
   decrementAmount,
   removeProduct,
 } from '../../../../features/cart/cart-slice'
+
+import { Minus, Plus, Trash } from 'phosphor-react'
 
 import {
   Card,
@@ -38,18 +37,21 @@ export const OrderSummary = () => {
                   <Actions>
                     <CounterSelect>
                       <button
+                        type="button"
                         onClick={() => dispatch(decrementAmount(product.id))}
                       >
                         <Minus size={20} color="#8047F8" weight="fill" />
                       </button>
                       {product.amount}
                       <button
+                        type="button"
                         onClick={() => dispatch(incrementAmount(product.id))}
                       >
                         <Plus size={20} color="#8047F8" weight="fill" />
                       </button>
                     </CounterSelect>
                     <RemoveButton
+                      type="button"
                       onClick={() => dispatch(removeProduct(product.id))}
                     >
                       <Trash size={16} color="#8047F8" />
@@ -78,7 +80,7 @@ export const OrderSummary = () => {
                 <strong>{`€ ${(cartItemsTotal + 5.5).toFixed(2)}`}</strong>
               </li>
             </ul>
-            <ConfirmOrderButton>Confirm Order</ConfirmOrderButton>
+            <ConfirmOrderButton type="submit">Confirm Order</ConfirmOrderButton>
           </CartTotalContainer>
         ) : (
           <p>There are no items in your cart!</p>
