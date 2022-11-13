@@ -11,12 +11,12 @@ import { CompleteOrderForm } from './components/completeOrderForm'
 import { OrderSummary } from './components/orderSummary'
 
 enum PaymentMethods {
-  credit = 'credit',
-  debit = 'debit',
-  cash = 'cash',
+  credit = 'Credit Card',
+  debit = 'Debit Card',
+  cash = 'Cash',
 }
 
-interface IFormInputs {
+export interface IFormInputs {
   zip: number
   street: string
   number: number
@@ -42,7 +42,6 @@ export function CheckoutPage() {
     })
     // Call the function to clean cart...
     dispacth(clearCart())
-    console.log(data)
   }
 
   return (

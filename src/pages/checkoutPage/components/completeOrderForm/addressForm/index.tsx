@@ -1,22 +1,8 @@
 import { useFormContext } from 'react-hook-form'
 import { AddressFormContainer, Input, RightText } from './styles'
 
-// type ErrorsType = {
-//   errors: {
-//     [key: string]: {
-//       message: string
-//     }
-//   }
-// }
-
-// Create a Input component with position: relative
-
 export function AddressForm() {
-  const {
-    register,
-    // formState: { errors },
-  } = useFormContext()
-  // const { errors } = formState as ErrorsType
+  const { register } = useFormContext()
 
   return (
     <AddressFormContainer>
@@ -24,48 +10,28 @@ export function AddressForm() {
         type="number"
         className="zip"
         placeholder="ZIP Code"
-        {...register('zip' /*, { required: true } */)}
+        {...register('zip')}
       />
-      {/* {errors.zip && <ErrorText>This field is required...</ErrorText>} */}
-
-      <Input
-        className="street"
-        placeholder="Street"
-        {...register('street' /*, { required: true } */)}
-      />
-      {/* {errors.street && <ErrorText>This field is required...</ErrorText>} */}
-
+      <Input className="street" placeholder="Street" {...register('street')} />
       <Input
         type="number"
         className="number"
         placeholder="Number"
-        {...register('number' /*, { required: true } */)}
+        {...register('number')}
       />
-      {/* {errors.number && <ErrorText>This field is required...</ErrorText>} */}
       <Input
         className="aditionalInfo"
         placeholder="Aditional Info"
-        {...register('adInfo' /*, { required: false } */)}
+        {...register('adInfo')}
       />
       <RightText>Optional</RightText>
       <Input
         className="district"
         placeholder="District"
-        {...register('district' /*, { required: true } */)}
+        {...register('district')}
       />
-      {/* {errors.district && <ErrorText>This field is required...</ErrorText>} */}
-      <Input
-        className="city"
-        placeholder="City"
-        {...register('city' /*, { required: true } */)}
-      />
-      {/* {errors.city && <ErrorText>This field is required...</ErrorText>} */}
-      <Input
-        className="uf"
-        placeholder="UF"
-        {...register('uf' /*, { required: true } */)}
-      />
-      {/* {errors.uf && <ErrorText>This field is required...</ErrorText>} */}
+      <Input className="city" placeholder="City" {...register('city')} />
+      <Input className="uf" placeholder="UF" {...register('uf')} />
     </AddressFormContainer>
   )
 }

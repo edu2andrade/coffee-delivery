@@ -19,7 +19,7 @@ export function OrderDetail({
       <IconContainer iconBG={iconBG}>{icon}</IconContainer>
       <div>
         <span>{title}</span>
-        <span className="sub">{subtitle}</span>
+        <span>{subtitle}</span>
       </div>
     </OrderDetailContainer>
   )

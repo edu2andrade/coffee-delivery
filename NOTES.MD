@@ -7,5 +7,6 @@
 # To do
 
 [ ] Form Validations (ZOD, YUP...)
+[ ] 404 Page Not Found
 [ ] Vitest
 [ ] Cypress

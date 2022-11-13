@@ -2,7 +2,6 @@ import { Bank, CreditCard, Money } from 'phosphor-react'
 import { useFormContext } from 'react-hook-form'
 import { PaymentMethodsInput } from '../paymentMethodsInput'
 import { PaymentMethodsOptionsContainer } from './styles'
-// import { ErrorText } from '../addressForm/styles'
 
 export const paymentMethods = {
   credit: {
@@ -20,13 +19,7 @@ export const paymentMethods = {
 }
 
 export function PaymentMethodsOptions() {
-  const {
-    register,
-    // formState: { errors },
-  } = useFormContext()
-
-  // const paymentMethodError = errors?.paymentMethod?.message as string
-  // const paymentMethodError = errors.paymentMethod?.message as string
+  const { register } = useFormContext()
 
   return (
     <PaymentMethodsOptionsContainer>
@@ -37,12 +30,9 @@ export function PaymentMethodsOptions() {
           icon={icon}
           label={label}
           value={key}
-          {...register('paymentMethods' /*, { required: true } */)}
+          {...register('paymentMethods')}
         />
       ))}
-      {/* {errors.paymentMethods && (
-        <ErrorText>Please select your Payment Method...</ErrorText>
-      )} */}
     </PaymentMethodsOptionsContainer>
   )
 }

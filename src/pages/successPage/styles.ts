@@ -65,7 +65,7 @@ export const OrderInfoContainer = styled.div`
     bottom: 0;
     z-index: -1;
     margin: -1px;
-    background: linear-gradient(90deg, #dbac2c, #8047f8);
+    background: linear-gradient(to right, #dbac2c, #8047f8);
     border-radius: inherit;
   }
 `
