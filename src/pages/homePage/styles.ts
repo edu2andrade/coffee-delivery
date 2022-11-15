@@ -25,6 +25,19 @@ export const HeroContainer = styled.section`
   align-items: center;
   gap: 4rem;
 
+  @media (max-width: 75rem) {
+    margin-top: 2rem;
+    flex-wrap: wrap-reverse;
+    gap: 2rem;
+
+    img {
+      height: 15rem;
+    }
+  }
+`
+export const ContentContainer = styled.div`
+  max-width: 50rem;
+
   h1 {
     font-size: 4rem;
     font-weight: 800;
@@ -36,9 +49,22 @@ export const HeroContainer = styled.section`
     margin-top: 1rem;
     font-size: 1.25rem;
   }
-`
-export const ContentContainer = styled.div`
-  max-width: 50rem;
+
+  @media (max-width: 84rem) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    h1 {
+      text-align: center;
+      font-size: 2.5rem;
+      line-height: 2.5rem;
+    }
+    p {
+      text-align: center;
+    }
+  }
 `
 export const FeaturesContainer = styled.div`
   margin-top: 4rem;
@@ -49,6 +75,13 @@ export const FeaturesContainer = styled.div`
 
   span {
     width: 20rem;
+  }
+
+  @media (max-width: 84rem) {
+    margin: 3rem 0;
+    span {
+      width: 100%;
+    }
   }
 `
 export const FeatureContainer = styled.div`

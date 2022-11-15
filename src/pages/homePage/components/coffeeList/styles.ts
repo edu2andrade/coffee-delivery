@@ -13,6 +13,10 @@ export const CoffeeListContainer = styled.section`
     color: ${(props) => props.theme['base-subtitle']};
     font-weight: 800;
     font-size: 2rem;
+
+    @media (max-width: 84rem) {
+      text-align: center;
+    }
   }
 `
 
@@ -20,5 +24,10 @@ export const List = styled.div`
   display: flex;
   flex-wrap: wrap;
   gap: 2rem;
-  margin-bottom: 10rem;
+  margin-bottom: 3rem;
+
+  @media (max-width: 84rem) {
+    align-items: center;
+    justify-content: center;
+  }
 `
