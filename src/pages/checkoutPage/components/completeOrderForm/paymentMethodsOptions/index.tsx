@@ -19,7 +19,10 @@ export const paymentMethods = {
 }
 
 export function PaymentMethodsOptions() {
-  const { register } = useFormContext()
+  const {
+    register,
+    formState: { errors },
+  } = useFormContext()
 
   return (
     <PaymentMethodsOptionsContainer>
@@ -30,9 +33,10 @@ export function PaymentMethodsOptions() {
           icon={icon}
           label={label}
           value={key}
-          {...register('paymentMethods')}
+          {...register('paymentMethods', { required: true })}
         />
       ))}
+      {errors.paymentMethods && <span>Payment Method is required</span>}
     </PaymentMethodsOptionsContainer>
   )
 }

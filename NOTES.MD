@@ -1,12 +1,16 @@
 # Features
 
 - React Router Dom
+- Styled Components
 - Redux Toolkit
 - React Hook Form
+- Zod?
 
 # To do
 
-[ ] Form Validations (ZOD, YUP...)
+[x] Form Validations (React Hook Form)
+[ ] Apply Responsiveness to all pages
 [ ] 404 Page Not Found
-[ ] Vitest
-[ ] Cypress
+[ ] Review Style/Responsiveness/Accessibility
+[ ] Unity tests
+[ ] E2E tests?

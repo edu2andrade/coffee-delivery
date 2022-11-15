@@ -1,11 +1,12 @@
 /* eslint-disable no-unused-vars */
+import { useAppDispatch } from '../../app/hooks'
+import { clearCart } from '../../features/cart/cart-slice'
+
 import { FormProvider, useForm } from 'react-hook-form'
+
 import { useNavigate } from 'react-router-dom'
 
 import { CheckoutContainer } from './styles'
-
-import { useAppDispatch } from '../../app/hooks'
-import { clearCart } from '../../features/cart/cart-slice'
 
 import { CompleteOrderForm } from './components/completeOrderForm'
 import { OrderSummary } from './components/orderSummary'
