@@ -4,6 +4,12 @@ export const CompleteOrderFormContainer = styled.div`
   display: flex;
   flex-direction: column;
   gap: 0.75rem;
+
+  @media (max-width: 84rem) {
+    h3 {
+      text-align: center;
+    }
+  }
 `
 export const FormSectionContainer = styled.div`
   width: 100%;

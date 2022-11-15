@@ -19,7 +19,6 @@ export const CoffeeListContainer = styled.section`
     }
   }
 `
-
 export const List = styled.div`
   display: flex;
   flex-wrap: wrap;

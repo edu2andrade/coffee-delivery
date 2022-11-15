@@ -9,7 +9,7 @@
 # To do
 
 [x] Form Validations (React Hook Form)
-[ ] Apply Responsiveness to all pages
+[x] Apply Responsiveness to all pages
 [ ] 404 Page Not Found
 [ ] Review Style/Responsiveness/Accessibility
 [ ] Unity tests

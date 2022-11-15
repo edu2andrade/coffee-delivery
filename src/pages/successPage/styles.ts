@@ -25,11 +25,17 @@ export const ContentContainer = styled.section`
   }
 
   @media (max-width: 84rem) {
+    margin: 2rem 0 3rem 0;
     grid-template-columns: fr;
     grid-template-areas:
       'title'
       'orderInfo'
       'img';
+
+    img {
+      justify-self: center;
+      height: 12rem;
+    }
   }
 `
 export const Title = styled.div`
@@ -42,6 +48,16 @@ export const Title = styled.div`
 
   p {
     font-size: 1.25rem;
+  }
+
+  @media (max-width: 84rem) {
+    text-align: center;
+    h1 {
+      font-size: 2rem;
+    }
+    p {
+      font-size: 1rem;
+    }
   }
 `
 export const OrderInfoContainer = styled.div`

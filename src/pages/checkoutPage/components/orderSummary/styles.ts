@@ -8,6 +8,9 @@ export const OrderSummaryContainer = styled.div`
 
   @media (max-width: 84rem) {
     min-width: 18rem;
+    h3 {
+      text-align: center;
+    }
   }
 `
 export const Card = styled.section`
