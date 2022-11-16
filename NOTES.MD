@@ -10,7 +10,7 @@
 
 [x] Form Validations (React Hook Form)
 [x] Apply Responsiveness to all pages
-[ ] 404 Page Not Found
-[ ] Review Style/Responsiveness/Accessibility
+[x] 404 Page Not Found
+[x] Review Style/Responsiveness/Accessibility
 [ ] Unity tests
 [ ] E2E tests?
