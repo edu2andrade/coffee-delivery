@@ -4,7 +4,8 @@
 - Styled Components
 - Redux Toolkit
 - React Hook Form
-- Zod?
+- Vitest
+- Cypress?
 
 # To do
 
@@ -12,5 +13,7 @@
 [x] Apply Responsiveness to all pages
 [x] 404 Page Not Found
 [x] Review Style/Responsiveness/Accessibility
+[x] Save State in Local Storage!!! I Forgot :)
+[ ] README Page
 [ ] Unity tests
 [ ] E2E tests?

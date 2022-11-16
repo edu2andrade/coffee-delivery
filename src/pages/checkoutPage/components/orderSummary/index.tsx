@@ -20,7 +20,7 @@ import {
 } from './styles'
 
 export const OrderSummary = () => {
-  const { products, cartItemsTotal } = useAppSelector((store) => store.cart)
+  const { products, cartItemsTotal } = useAppSelector((store) => store)
   const dispatch = useAppDispatch()
 
   return (

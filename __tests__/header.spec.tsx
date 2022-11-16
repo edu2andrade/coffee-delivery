@@ -13,7 +13,7 @@ describe('Header tests', () => {
   it('should render the button', () => {
     render(<Header />)
     expect(
-      screen.getByRole('button', { name: /login with google/i }),
+      screen.getByRole('button', { name: /Barcelona (SPAIN)/i }),
     ).toBeDefined()
   })
 

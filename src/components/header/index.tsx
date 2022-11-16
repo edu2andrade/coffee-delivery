@@ -11,7 +11,7 @@ import {
 } from './styles'
 
 export function Header() {
-  const { totalAmount } = useAppSelector((store) => store.cart)
+  const { totalAmount } = useAppSelector((store) => store)
   return (
     <HeaderContainer>
       <ContentContainer>

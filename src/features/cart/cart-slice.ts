@@ -106,6 +106,6 @@ export const {
   clearCart,
 } = cartSlice.actions
 
-export const selectCart = (state: RootState) => state.cart
+export const selectCart = (state: RootState) => state
 
 export default cartSlice.reducer
