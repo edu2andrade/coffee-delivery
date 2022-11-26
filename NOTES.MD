@@ -14,6 +14,6 @@
 [x] 404 Page Not Found
 [x] Review Style/Responsiveness/Accessibility
 [x] Save State in Local Storage!!! I Forgot :)
-[ ] README Page
+[x] README Page
 [ ] Unity tests
 [ ] E2E tests?
