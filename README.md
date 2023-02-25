@@ -32,7 +32,7 @@ This project is an application to manage a shopping cart from a fictitious coffe
 - [React Hook Form](https://react-hook-form.com/)
 
 
-You can see the **repository** --> [here](https://github.com/edu2andrade/coffee-delivery).
+You can see it **live** --> [LIVE PAGE](https://coffee-delivery-andradept.vercel.app/).
 
 ---
 
